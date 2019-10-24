@@ -24,7 +24,7 @@ namespace currency_converter
             else
             {
                 ExchangerateDTO er = exchangeRates.Where(p => p.Currency.Equals(product.Currency)).First();
-                return new PriceDTO(Math.Round((product.Price * er.Rate) * er.Rate, 2));
+                return new PriceDTO(Math.Round(product.Price * er.Rate, 2));
             }
 
         }
